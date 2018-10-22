@@ -9,18 +9,17 @@
   <!-- Materialize links -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="assets/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Bungee+Shade|Knewave|Sigmar+One" rel="stylesheet">
   <!-- additional styles -->
-  <link href="assets/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="assets/css/style.css" type="text/css" rel="stylesheet"/>
+  
 </head>
 <body>
   <header>
       <nav>
-        <div class="nav-wrapper red">
+        <div class="nav-wrapper purple darken-1">
           <a href="#" class="brand-logo center">Comics Time Machine</a>
-          <ul id="nav-mobile" class="left hide-on-med-and-down">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-          </ul>
         </div>
       </nav>
   </header>
@@ -31,30 +30,30 @@
           <div class="card grey darken-1">
             <div class="card-content white-text">
               <span class="card-title">Enter the Timestream!</span>
-              <p>Submit your birthdate.</p>
-              <p>The machine will conjure up a selection of comics from the past.</p>
-              <p>Click the thumbnail of the comic you want to transport to the present, and you will see a list of existing physical copies</p>
-              <p>Click on one of the items to obtain your own copy of a relic from your birth year!</p>
+              <ul class="browser-default">
+                <li>Submit your birthdate.</li>
+                <li>The machine will locate a selection of comics from your past.</li>
+                <li>Click the thumbnail of the comic book you want to transport to the present, and you will see a list of existing physical copies</li>
+                <li>Click on one of the items to obtain your own copy of a relic from your birth year!</li>
+              </ul>
             </div>
           </div>
         </div>
         <div class="col s12 m6" id="user-input">
-          <div class="card blue darken-1">
-            <div class="card-content white-text">
+          <div class="card light-green">
+            <div class="card-content">
                 <div class="row">
                   <div class="input-field col s6">
-                    <input id="birthdate" type="text" class="validate">
-                    <label for="birthdate">Birthdate</label>
+                    <input id="start-date" type="text" class="validate">
+                    <label for="start-date" class="purple-text">Start Date</label>
                   </div>
                   <div class="input-field col s6">
-                    <input id="character-name" type="text" class="validate">
-                    <label for="character-name">Character Name</label>
-                  </div>
+                      <input id="end-date" type="text" class="validate">
+                      <label for="end-date" class="purple-text">End Date</label>
+                    </div>
                 </div>
                 <div class="row">
-                    <button class="btn waves-effect waves-light yellow darken-2" type="submit" name="action">Activate Time Machine
-                      <i class="material-icons right">send</i>
-                    </button>
+                    <button class="btn waves-effect waves-light purple darken-1" type="submit">Activate Time Machine</button>
                 </div>
             </div>
           </div>
@@ -62,28 +61,45 @@
       </div>
       <div id="comic-thumbnails">
         <!-- Comics results/thumbnails dynamically added here -->
-        <ul>
-          <li>Comic 1</li>
-          <li>Comic 2</li>
-          <li>Comic 3</li>
-          <li>Comic 4</li>
-          <li>Comic 5</li>
-        </ul>
+        <div class="row">
+          <div class="col m2">
+            <img class="responsive-img hoverable" src="assets/images/0660c-iron-man-128.jpg">
+          </div>
+          <div class="col m2">
+            <img class="responsive-img hoverable" src="assets/images/531ac-defenders2b10.jpg">
+          </div>
+          <div class="col m2">
+            <img class="responsive-img hoverable" src="assets/images/9ea18-amazing-spider-man-100.jpg">
+          </div>
+          <div class="col m2">
+            <img class="responsive-img hoverable" src="assets/images/e3912-marvel-spotlight-5.jpg">
+          </div>
+          <div class="col m2">
+            <img class="responsive-img hoverable" src="assets/images/58bfe-3250776-1236740150-29114.jpg">
+          </div>
+          <div class="col m2">
+            <img class="responsive-img hoverable" src="assets/images/31be6-2577546-savage_sword_of_conan_014_01.jpg">
+          </div>
+        </div>
+
       </div>
-      <div id="ebay-results">
+      <div class="collection" id="ebay-results">
         <!-- eBay results dynamically added here -->
-        <ul>
-          <li>eBay Result 1</li>
-          <li>eBay Result 2</li>
-          <li>eBay Result 3</li>
-          <li>eBay Result 4</li>
-          <li>eBay Result 5</li>
-        </ul>
+        <a href="#!" class="collection-item purple-text">eBay Result 1</a>
+        <a href="#!" class="collection-item purple-text">eBay Result 2</a>
+        <a href="#!" class="collection-item purple-text">eBay Result 3</a>
+        <a href="#!" class="collection-item purple-text">eBay Result 4</a>
       </div>
     </div>
       
 
   </main>
+  
+  <footer class="page-footer purple">
+    <div class="footer-copyright">
+      
+    </div>
+  </footer>
 
   <!--  SCRIPTS-->
   <!-- jQuery -->
