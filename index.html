@@ -13,6 +13,7 @@
   <link href="https://fonts.googleapis.com/css?family=Bungee+Shade|Knewave|Sigmar+One" rel="stylesheet">
   <!-- additional styles -->
   <link href="assets/css/style.css" type="text/css" rel="stylesheet"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.js"></script>
   
 </head>
 <body>
@@ -55,15 +56,15 @@
                     </div>
                 </div>
                 <div class="row">
-                    <button class="btn waves-effect waves-light purple darken-1" type="submit">Activate Time Machine</button>
+                    <button id="add-topic" class="btn waves-effect waves-light purple darken-1" type="submit">Activate Time Machine</button>
                 </div>
             </div>
           </div>
         </div>
       </div>
-      <div id="comic-thumbnails">
+      <div >
         <!-- Comics results/thumbnails dynamically added here -->
-        <div class="row">
+        <div class="row" id="comic-thumbnails">
           <div class="col m2">
             <img class="responsive-img  materialboxed z-depth-2" src="assets/images/0660c-iron-man-128.jpg">
           </div>
@@ -115,7 +116,7 @@
   <!-- Moment.js -->
   <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
   <!-- App -->
-  <script type="text/javascript" src="assets/javascript/app.js"></script>
+  <script type="text/javascript" src="assets/js/marvel.js"></script>
 
   </body>
 </html>
