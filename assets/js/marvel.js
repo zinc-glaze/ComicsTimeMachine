@@ -49,7 +49,7 @@ $(document).ready(function(){
     // var queryURL = "http://gateway.marvel.com/v1/public/comics?dateRange=" + date1 + "%2C" + date2 + "&apikey=${public_api}&hash=${hash}&ts=${ts}";
     // var queryURL = "https://gateway.marvel.com:443/v1/public/comics?dateRange=1999-5-6%2C2000-2-6&apikey=c9f20c574c0989558b1693b816bba31b";
     var hash = CryptoJS.MD5(`${ts}${private_api}${public_api}`);
-    var queryURL = "http://gateway.marvel.com/v1/public/comics?dateRange=" + date1 + "%2C" + date2 + "&apikey="+ public_api + "&hash=" + hash + "&ts=" + ts;
+    var queryURL = "https://gateway.marvel.com/v1/public/comics?dateRange=" + date1 + "%2C" + date2 + "&apikey="+ public_api + "&hash=" + hash + "&ts=" + ts;
 
 
     $.ajax({
