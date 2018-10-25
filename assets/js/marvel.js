@@ -1,21 +1,58 @@
 $(document).ready(function(){
-var public_api = "c9f20c574c0989558b1693b816bba31b";
- var private_api = "3051be9fc6637b092f1c20e86cff5f82cda8e01f";
+  var public_api = "c9f20c574c0989558b1693b816bba31b";
+  var private_api = "3051be9fc6637b092f1c20e86cff5f82cda8e01f";
 
- var ts = Math.floor(Math.random() * Math.floor(1000));
+  var ts = Math.floor(Math.random() * Math.floor(1000));
 
- $("#add-topic").on("click", function (event) {
+  $("#add-topic").on("click", function (event) {
     event.preventDefault();
     var date1 = $("#start-date").val().toLowerCase().trim();
-    var date2 = $("#end-date").val().toLowerCase().trim();
+
+
+    //VALIDATES USER INPUT
+    //Checks to see if date1 is 10 characters long as has "-" as 5th and 8th character
+    if (date1.length === 10 && date1[4] === "-" && date1[7] === "-") {
+      var dateFormat = true;
+    }
+    else {
+      dateFormat = false;
+    }
+    //Splits date1 into three strings
+    var dateArray = date1.split("-");
+
+    //Checks to see if all three numbers are within valid range
+    if (parseInt(dateArray[0]) <= 2018 && parseInt(dateArray[1]) <=12 && parseInt(dateArray[2]) <=31) {
+      var dateRange = true;
+    }
+    else {
+      dateRange = false;
+    }
+
+    //If conditions for user date1 input are not met: give error message, clear input box, and exit the click event
+    if (dateFormat === false || dateRange === false) {
+      $("#error-msg").text("Please enter valid date in YYYY-MM-DD format!");
+      document.getElementById("start-date").value = "";
+      return;
+    }
+
+    //User input is validated and accepted
+    //Restore original form text
+    $("#error-msg").text("Enter Your Birth Date Here (YYYY-MM-DD)");
+
+    //Generate date2
+    var date2 = moment(date1).add(1, 'months').format("YYYY-MM-DD");
+    
+    //Removes user input from text box
+    document.getElementById("start-date").value = "";
+
+
     // var queryURL = "http://gateway.marvel.com/v1/public/comics?dateRange=" + date1 + "%2C" + date2 + "&apikey=${public_api}&hash=${hash}&ts=${ts}";
-   // var queryURL = "https://gateway.marvel.com:443/v1/public/comics?dateRange=1999-5-6%2C2000-2-6&apikey=c9f20c574c0989558b1693b816bba31b";
-   var hash = CryptoJS.MD5(`${ts}${private_api}${public_api}`);
-   var queryURL = "http://gateway.marvel.com/v1/public/comics?dateRange=" + date1 + "%2C" + date2 + "&apikey="+ public_api + "&hash=" + hash + "&ts=" + ts;
+    // var queryURL = "https://gateway.marvel.com:443/v1/public/comics?dateRange=1999-5-6%2C2000-2-6&apikey=c9f20c574c0989558b1693b816bba31b";
+    var hash = CryptoJS.MD5(`${ts}${private_api}${public_api}`);
+    var queryURL = "http://gateway.marvel.com/v1/public/comics?dateRange=" + date1 + "%2C" + date2 + "&apikey="+ public_api + "&hash=" + hash + "&ts=" + ts;
 
 
-
-   $.ajax({
+    $.ajax({
     url: queryURL,
     method: "GET"
     })
@@ -48,8 +85,9 @@ var public_api = "c9f20c574c0989558b1693b816bba31b";
             comicDiv.append(comicImg, comicTitle);
 
 
-           $("#comic-thumbnails").append(comicDiv);
+            $("#comic-thumbnails").append(comicDiv);
           }
     }
-    )});
+  
+  )});
 });
