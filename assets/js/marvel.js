@@ -65,7 +65,7 @@ $(document).ready(function(){
     $("#comic-thumbnails").empty();
 
         for (i = 0; i < comicLength; i++) {
-            if(results[i].format === "Comic" || results[i.format === "Digital Comic"]){
+            if(results[i].thumbnail.path !== "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available" && results[i].format === "Comic" || results[i].format === "Digital Comic"){
                 console.log(results[i].format)
             }
             else{
