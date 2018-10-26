@@ -70,7 +70,8 @@ $(document).ready(function(){
                 var comicDiv = $("<div>");
                 comicDiv.addClass("col m2");
                 var comicImg = $("<img>");
-                comicImg.addClass("responsive-img materialboxed z-depth-2");
+                comicImg.addClass("responsive-img z-depth-2");
+                comicImg.attr("id", "img-link");
                 var newImg = (results[i].thumbnail.path + ".jpg");
                 comicImg.attr("src", newImg);
                 comicImg.attr("title", results[i].title);

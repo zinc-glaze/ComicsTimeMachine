@@ -8,7 +8,7 @@
   <!-- CSS  -->
   <!-- Materialize links -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="assets/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="assets/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Bungee+Shade|Knewave|Sigmar+One" rel="stylesheet">
   <!-- additional styles -->
@@ -34,10 +34,10 @@
             <div class="card-content white-text">
               <span class="card-title">Enter the Timestream!</span>
               <ul class="browser-default">
-                <li>Submit your birthdate in the green box.</li>
-                <li>The machine will locate a selection of comics from your past.</li>
+                <li>Enter your birthdate in the green box and press the purple button.</li>
+                <li>The time machine will locate a selection of comics from your past.</li>
                 <li>Click the thumbnail of the comic book you want to transport to the present.</li>
-                <li>Click on one of the Comic Marketplace results to obtain a relic from your birth year!</li>
+                <li>Click on one of the Chronal Transporter results to obtain a relic from the Timestream.</li>
               </ul>
             </div>
           </div>
@@ -62,72 +62,43 @@
         <!-- Comics results/thumbnails dynamically added here -->
         <div class="row" id="comic-thumbnails">
           <div class="col m2">
-            <img class="responsive-img  materialboxed z-depth-2" src="assets/images/0660c-iron-man-128.jpg">
+            <img class="responsive-img z-depth-2" src="assets/images/0660c-iron-man-128.jpg">
           </div>
           <div class="col m2">
-            <img class="responsive-img  materialboxed z-depth-2" src="assets/images/531ac-defenders2b10.jpg">
+            <img class="responsive-img z-depth-2" src="assets/images/531ac-defenders2b10.jpg">
           </div>
           <div class="col m2">
-            <img class="responsive-img  materialboxed z-depth-2" src="assets/images/9ea18-amazing-spider-man-100.jpg">
+            <img class="responsive-img z-depth-2" src="assets/images/9ea18-amazing-spider-man-100.jpg">
           </div>
           <div class="col m2">
-            <img class="responsive-img  materialboxed z-depth-2" src="assets/images/e3912-marvel-spotlight-5.jpg">
+            <img class="responsive-img z-depth-2" src="assets/images/e3912-marvel-spotlight-5.jpg">
           </div>
           <div class="col m2">
-            <img class="responsive-img  materialboxed z-depth-2" src="assets/images/58bfe-3250776-1236740150-29114.jpg">
+            <img class="responsive-img z-depth-2" src="assets/images/58bfe-3250776-1236740150-29114.jpg">
           </div>
           <div class="col m2">
-            <img class="responsive-img  materialboxed z-depth-2" src="assets/images/31be6-2577546-savage_sword_of_conan_014_01.jpg">
+            <img class="responsive-img z-depth-2" src="assets/images/31be6-2577546-savage_sword_of_conan_014_01.jpg">
           </div>
         </div>
-
       </div>
     
       <div class="collection with-header z-depth-1">
         <div class="collection-header grey darken-1 white-text">
-          <h5>Comic Marketplace</h5>
+          <h5><i class="material-icons">history</i>  Chronal Transporter</h5>
         </div>
-        <!-- eBay results dynamically added here -->
         <div id="ebay-results">
-          <div class="row collection-item">
-            <div class="col m3">
-              <img style="max-height: 160px" src="assets/images/e9514-swamp_thing_v-1_9.jpg">
-            </div>
-            <div class="col m9">
-              <h5>Comic Title</h5>
-              <a>eBay link</a>
-            </div>
-          </div>
-          <div class="row collection-item">
-            <div class="col m3">
-              <img style="max-height: 160px" src="assets/images/1addb-new-gods-1.jpg">
-            </div>
-            <div class="col m9">
-              <h5>Comic Title</h5>
-              <a>eBay link</a>
-            </div>
-          </div>
-          <div class="row collection-item">
-            <div class="col m3">
-              <img style="max-height: 160px" src="assets/images/69ace-green2blantern2bgreen2barrow2b76.jpg">
-            </div>
-            <div class="col m9">
-              <h5>Comic Title</h5>
-              <a>eBay link</a>
-            </div>
-          </div>
+          <!-- eBay results dynamically added here -->
+          <img id="kirby" class="responsive-img" src="assets/images/kirbybw0.jpg">
         </div>
-        
       </div>
+
     </div>
-      
 
   </main>
   
-  <footer class="page-footer purple z-depth-1">
-    <div class="footer-copyright">
-      
-    </div>
+  <footer class="page-footer purple z-depth-1 center">
+    <div id="purple-space"></div>
+    <small>&copy; Copyright 2018</small>
   </footer>
 
   <!--  SCRIPTS-->
@@ -137,8 +108,7 @@
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>
   <!-- Materialize -->
-  <script type="text/javascript" src="assets/js/materialize.js"></script>
-  <script type="text/javascript" src="assets/js/init.js"></script>
+  <script type="text/javascript" src="assets/js/materialize.min.js"></script>
   <!-- Moment.js -->
   <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
   <!-- App -->
