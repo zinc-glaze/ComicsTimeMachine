@@ -7,4 +7,4 @@ ebay API used to pull current auction information to publish those comis
 
 Authors: David Hernandez, Jay Goss, Logan Knight, Zeke Graves
 
-![alt text](assets/images/frontpage)
+![Front Page](https://github.com/Jay-Goss/GroupProject1/blob/master/assets/images/frontpage.png)
