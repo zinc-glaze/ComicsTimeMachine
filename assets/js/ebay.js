@@ -1,6 +1,6 @@
     // keyword = "spiderman"
        
-    $(document).on("click", ".responsive-img", function() {
+    $(document).on("click", "#img-link", function() {
       var keyword = $(this).attr("title");
 
       var queryURL = `https://cors-anywhere.herokuapp.com/http://open.api.ebay.com/shopping?callname=FindProducts&responseencoding=JSON&appid=JayGoss-Marvelti-PRD-d7f3df809-292061ff&siteid=0&version=967&QueryKeywords=` + keyword + `&AvailableItemsOnly=true&MaxEntries=4`
@@ -36,7 +36,7 @@
       var comicPicture = results[i].StockPhotoURL;
       var picture = $("<img>")
       picture.attr("src", comicPicture);
-      picture.addClass("responsive-img z-depth-1")
+      picture.addClass("z-depth-1")
 
       //creates heading element for comic title
       var comicTitle = results[i].Title;

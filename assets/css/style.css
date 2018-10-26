@@ -13,8 +13,19 @@
 	font-size: inherit;
 }
 
-
-
 h2 {
   font-family: 'Sigmar One', cursive;
+}
+
+#purple-space {
+  height: 30px;
+}
+
+#kirby {
+  opacity: .7;
+}
+
+#img-link:hover {
+  opacity: .7;
+  cursor: pointer;
 }
