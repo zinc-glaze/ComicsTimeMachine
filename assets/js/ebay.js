@@ -19,21 +19,41 @@
       var results = response.Product;
 
      for (i = 0; i < results.length; i++) {
-      var ebayDiv = $("<div>");
 
+      //creates div for one eBay result 
+      var ebayDiv = $("<div>");
+      ebayDiv.addClass("row collection-item");
+
+      //creates div for eBay image
+      var imgDiv = $("<div>");
+      imgDiv.addClass("col m3");
+
+      //creates div for comic title and auction link
+      var titleDiv = $("<div>");
+      titleDiv.addClass("col m9");
+
+      //stores image tag to variable and adds src and max-height attributes
       var comicPicture = results[i].StockPhotoURL;
       var picture = $("<img>")
       picture.attr("src", comicPicture);
+      picture.addClass("responsive-img z-depth-1")
 
+      //creates heading element for comic title
       var comicTitle = results[i].Title;
-      var title = $("<p>").text(comicTitle);
+      var title = $("<h6>").text(comicTitle);
 
+      //creates anchor element for auction link
       var auctionPage = results[i].DetailsURL;
       var auctionLink = $("<a>").text(auctionPage);
       auctionLink.attr("href", auctionPage);
-   
-      ebayDiv.append(picture, title, auctionLink);
- 
+      auctionLink.attr("target", "_blank");
+
+      //constructs complete div for one result
+      imgDiv.append(picture);
+      titleDiv.append(title, auctionLink);
+      ebayDiv.append(imgDiv, titleDiv);
+      
+      //Prepends result to container div
       $("#ebay-results").prepend(ebayDiv);
 
     }
